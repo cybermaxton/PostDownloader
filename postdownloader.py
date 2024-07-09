@@ -122,7 +122,7 @@ def FBDownloader():
 def ExitProgram():
     print(f'''
                  {Fore.YELLOW}Thanks for using Post Downloder{Style.RESET_ALL}
-          {Fore.GREEN}Also Visit our Github Profile:-{Style.RESET_ALL} {Fore.RED}Code With MaXton{Style.RESET_ALL}''')
+          {Fore.GREEN}Also Visit our Github Profile:-{Style.RESET_ALL} {Fore.RED}Cyber Maxton{Style.RESET_ALL}''')
     exit()
 
 while True:
