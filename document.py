@@ -3,7 +3,7 @@ from colorama import Fore, Style
 VERSION = f'{Fore.RED}1.0.0{Style.RESET_ALL}'
 
 HELP = f'''{Fore.YELLOW}
-                     YT Downloader by Code With MaXton
+                       YT Downloader by Cyber Maxton
                    ---Video Downloader Tool For Linux ---
                              Version {VERSION}
 
