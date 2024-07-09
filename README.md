@@ -1,6 +1,11 @@
-# PostDownloader
-Post Downloader tool for linux based on python
-To use Post Downloader tool Install this tool in linux by pasting below syntax in terminal
-git clone https://github.com/maxtoncode/PostDownloader
-then open the Post Downloader folder and run main.py file using python3
-python3 main.py
+## Installation
+
+You can clone PostDownloader using git clone
+
+```sh
+git clone https://github.com/cybermaxton/PostDownloader
+
+After cloning install all required modules
+
+```sh
+pip3 install -r requirements.txt
