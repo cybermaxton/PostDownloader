@@ -3,7 +3,7 @@ from colorama import Fore, Style
 
 version = document.VERSION
 
-tagline = f'{Fore.LIGHTRED_EX}By Code With MaXton'
+tagline = f'{Fore.LIGHTRED_EX}By Cyber Maxton'
 
 PostDownloaderText = (f'''{Fore.LIGHTYELLOW_EX}
  ____           _     ____                      _                 _
