@@ -3,7 +3,7 @@ from colorama import Fore, Style
 
 version = document.VERSION
 
-tagline = f'{Fore.LIGHTRED_EX}By Cyber Maxton'
+tagline = f'{Fore.LIGHTRED_EX}By Cyber MaXton'
 
 PostDownloaderText = (f'''{Fore.LIGHTYELLOW_EX}
  ____           _     ____                      _                 _
@@ -11,7 +11,7 @@ PostDownloaderText = (f'''{Fore.LIGHTYELLOW_EX}
 | |_) / _ \/ __| __| | | | |/ _ \ \ /\ / / '_ \| |/ _ \ / _` |/ _` |/ _ \ '__|
 |  __/ (_) \__ \ |_  | |_| | (_) \ V  V /| | | | | (_) | (_| | (_| |  __/ |
 |_|   \___/|___/\__| |____/ \___/ \_/\_/ |_| |_|_|\___/ \__,_|\__,_|\___|_|
-                                                        {tagline}
+                                                            {tagline}
                                                             --Version {version}''')
 
 YTDownloaderText = (f'''{Fore.LIGHTMAGENTA_EX}
@@ -20,7 +20,7 @@ __   _______   ____                      _                 _
  \ V /  | |   | | | |/ _ \ \ /\ / / '_ \| |/ _ \ / _` |/ _` |/ _ \ '__|
   | |   | |   | |_| | (_) \ V  V /| | | | | (_) | (_| | (_| |  __/ |
   |_|   |_|   |____/ \___/ \_/\_/ |_| |_|_|\___/ \__,_|\__,_|\___|_|
-                                                 {tagline}
+                                                            {tagline}
                                                      --Version {version}''')
 
 IGDownloaderText = (f'''{Fore.LIGHTGREEN_EX}
@@ -29,7 +29,7 @@ IGDownloaderText = (f'''{Fore.LIGHTGREEN_EX}
  | | |  _  | | | |/ _ \ \ /\ / / '_ \| |/ _ \ / _` |/ _` |/ _ \ '__|
  | | |_| | | |_| | (_) \ V  V /| | | | | (_) | (_| | (_| |  __/ |
 |___\____| |____/ \___/ \_/\_/ |_| |_|_|\___/ \__,_|\__,_|\___|_|
-                                              {tagline}
+                                                         {tagline}
                                                   --Version {version}''')
 
 FBDownloaderText = (f'''{Fore.LIGHTCYAN_EX}
@@ -38,5 +38,6 @@ FBDownloaderText = (f'''{Fore.LIGHTCYAN_EX}
 | |_  |  _ \  | | | |/ _ \ \ /\ / / '_ \| |/ _ \ / _` |/ _` |/ _ \ '__|
 |  _| | |_) | | |_| | (_) \ V  V /| | | | | (_) | (_| | (_| |  __/ |
 |_|   |____/  |____/ \___/ \_/\_/ |_| |_|_|\___/ \__,_|\__,_|\___|_|
-                                                 {tagline}
+                                                            {tagline}
                                                      --Version {version}''')
+
