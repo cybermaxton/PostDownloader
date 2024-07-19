@@ -5,6 +5,8 @@ from moviepy.editor import AudioFileClip, VideoFileClip
 import os
 from colorama import Fore, Style
 import time
+import instaloader as IgLoad
+import re
 
 version = document.VERSION
 
@@ -111,8 +113,43 @@ def YTDownloader():
 
 def IGDownlaoder():
     print(logos.IGDownloaderText)
-    print('Instagram Downloader is in developing stage! Coming soon...')
-    return
+
+    loader = IgLoad.Instaloader(
+        download_pictures=True,
+        download_videos=True,
+        download_video_thumbnails=False,
+        download_geotags=False,
+        download_comments=False,
+        save_metadata=False,  # Avoid saving metadata
+        post_metadata_txt_pattern=''  # Disable saving caption
+    )
+
+    # Taking post URL as input
+    post_url = input(f'{PlusLogo} Enter Instagram Post URL: ')
+
+    # Extracting unique identifier of post from URL 
+    try:
+        shortcode = re.search(r'/(p|reel|tv)/([^/]+)/', post_url).group(2)
+    except AttributeError:
+        print("Invalid URL. Please enter a valid Instagram post URL.")
+
+    try:
+        # Downloading the post
+        post  = IgLoad.Post.from_shortcode(loader.context, shortcode)
+
+        # Setting custom download directory to current directory
+        loader.dirname_pattern = '.'
+
+        # Custom filename pattern to avoid directory creation
+        loader.filename_pattern = '{date_utc}_{shortcode}'
+
+        # Download Post
+        loader.download_post(post, target='.')
+
+        print(f"{PlusLogo} Instagram Post Downloaded Succesfully \n{PlusLogo}")
+    
+    except:
+        print('Unable to download')
 
 def FBDownloader():
     print(logos.FBDownloaderText)
@@ -121,15 +158,15 @@ def FBDownloader():
 
 def ExitProgram():
     print(f'''
-                 {Fore.YELLOW}Thanks for using Post Downloder{Style.RESET_ALL}
-          {Fore.GREEN}Also Visit our Github Profile:-{Style.RESET_ALL} {Fore.RED}Cyber Maxton{Style.RESET_ALL}''')
+                {Fore.YELLOW}Thanks for using Post Downloder{Style.RESET_ALL}
+          {Fore.GREEN}Also Visit our Github Profile:-{Style.RESET_ALL} {Fore.RED}Cyber MaXton{Style.RESET_ALL}''')
     exit()
 
 while True:
     time.sleep(2)
     PostDownloader()
 
-    user_input = input(f'\n {Fore.YELLOW}[+]{Style.RESET_ALL} Type Here: ')
+    user_input = input(f'\n{Fore.YELLOW}[+]{Style.RESET_ALL} Type Here: ')
 
     if user_input == "":
         print(document.NO_INPUT)
@@ -148,3 +185,6 @@ while True:
     
     elif user_input == '-e' or user_input == '--exit':
         ExitProgram()
+    
+    else:
+        print(document.WRONGINPUT)
